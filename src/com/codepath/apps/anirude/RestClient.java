@@ -1,7 +1,7 @@
 package com.codepath.apps.anirude;
 
 import org.scribe.builder.api.Api;
-import org.scribe.builder.api.FlickrApi;
+import org.scribe.builder.api.FacebookApi;
 
 import android.content.Context;
 
@@ -22,11 +22,11 @@ import com.loopj.android.http.RequestParams;
  * 
  */
 public class RestClient extends OAuthBaseClient {
-	public static final Class<? extends Api> REST_API_CLASS = FlickrApi.class; // Change this
-	public static final String REST_URL = "http://api.flickr.com/services"; // Change this, base API URL
-	public static final String REST_CONSUMER_KEY = "SOME_KEY";       // Change this
-	public static final String REST_CONSUMER_SECRET = "SOME_SECRET"; // Change this
-	public static final String REST_CALLBACK_URL = "oauth://cprest"; // Change this (here and in manifest)
+	public static final Class<? extends Api> REST_API_CLASS = FacebookApi.class; // Change this
+	public static final String REST_URL = "https://api.facebook.com/2.0"; // Change this, base API URL
+	public static final String REST_CONSUMER_KEY = "946938095331351";       // Change this
+	public static final String REST_CONSUMER_SECRET = "4e6b1cad4fd6e4fcd40dc7f309149b06"; // Change this
+	public static final String REST_CALLBACK_URL = "oauth://cpanirude"; // Change this (here and in manifest)
 
 	public RestClient(Context context) {
 		super(context, REST_API_CLASS, REST_URL, REST_CONSUMER_KEY, REST_CONSUMER_SECRET, REST_CALLBACK_URL);
